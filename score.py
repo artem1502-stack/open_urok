@@ -7,7 +7,7 @@ class Score(pg.sprite.Sprite):
 		self.left = 0
 		self.right = 0
 		self.font = pg.font.SysFont("arial", 100)
-		self.text = f"{self.left} : {self.right}"
+		self.text = f"{self.right} : {self.left}"
 		self.image = self.font.render(self.text, True, TEXT_COLOR)
 		self.rect = self.image.get_rect()
 		self.rect.center = TEXT_POS
@@ -26,7 +26,7 @@ class Score(pg.sprite.Sprite):
 		self.update_text()
 
 	def update_text(self):
-		self.text = f"{self.left} : {self.right}"
+		self.text = f"{self.right} : {self.left}"
 		self.image = self.font.render(self.text, True, TEXT_COLOR)
 		self.rect = self.image.get_rect()
 		self.rect.center = TEXT_POS
